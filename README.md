@@ -26,6 +26,78 @@ Automated tests for these functions are implemented using the `unittest` framewo
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
+### Step 2: Create a New Python Project in PyCharm
+
+1. Open PyCharm.
+2. Click on `File > New Project`.
+3. Choose a location for your project.
+4. Click **Create**.
+
+### Step: Write a Simple Python Program
+
+We'll create a simple program that has two functions: one to add two numbers and another to check if a number is even.
+
+In the PyCharm project, create a new Python file:
+
+1. Right-click the project folder, choose `New > Python File`.
+2. Name the file `calculator.py`.
+3. Add the following code to `calculator.py`:
+
+```python
+# calculator.py
+
+def add(a, b):
+    """
+    Returns the sum of two numbers.
+    """
+    return a + b
+
+def is_even(number):
+    """
+    Returns True if the number is even, False otherwise.
+    """
+    return number % 2 == 0
+```
+
+### Step: Writing Tests
+
+Now, let's write some tests to automatically verify that the `add()` and `is_even()` functions work correctly.
+
+Create a new Python file for the tests:
+
+1. Right-click the project folder, choose `New > Python File`.
+2. Name the file `test_calculator.py`.
+3. Add the following test cases to `test_calculator.py`:
+
+```python
+# test_calculator.py
+
+import unittest
+from calculator import add, is_even
+
+class TestCalculator(unittest.TestCase):
+
+    def test_add(self):
+        """
+        Test if add() returns the correct sum.
+        """
+        self.assertEqual(add(2, 3), 5)   # 2 + 3 should equal 5
+        self.assertEqual(add(-1, 1), 0)  # -1 + 1 should equal 0
+
+    def test_is_even(self):
+        """
+        Test if is_even() correctly identifies even numbers.
+        """
+        self.assertTrue(is_even(4))    # 4 is even
+        self.assertFalse(is_even(5))   # 5 is not even
+
+# This is needed for command-line execution, not required for PyCharm's inbuilt test runner.
+if __name__ == "__main__":
+    unittest.main()
+
+```
+
+
 ### 2. Create a virtual environment (optional)
 
 ```bash
