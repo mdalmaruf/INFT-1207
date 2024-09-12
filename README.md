@@ -1,5 +1,5 @@
 
-# Python Calculator with Automated Testing
+# Activity 1: Python Calculator with Automated Testing
 
 This repository contains a simple Python program that includes two functions:
 - `add(a, b)`: Adds two numbers and returns the result.
