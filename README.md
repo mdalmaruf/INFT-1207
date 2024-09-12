@@ -17,6 +17,11 @@ Automated tests for these functions are implemented using the `unittest` framewo
 
 - Python 3.x installed
 - A virtual environment is recommended but not required
+```bash
+python -m venv venv
+source venv/bin/activate      # On macOS/Linux
+venv\Scripts\activate         # On Windows
+```
 
 ## Setup Instructions
 
@@ -26,14 +31,15 @@ Automated tests for these functions are implemented using the `unittest` framewo
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
-### Step 2: Create a New Python Project in PyCharm
+### Alternatively you can create from the scratch
+#### Create a New Python Project in PyCharm
 
 1. Open PyCharm.
 2. Click on `File > New Project`.
 3. Choose a location for your project.
 4. Click **Create**.
 
-### Step: Write a Simple Python Program
+#### Write a Simple Python Program
 
 We'll create a simple program that has two functions: one to add two numbers and another to check if a number is even.
 
@@ -59,7 +65,7 @@ def is_even(number):
     return number % 2 == 0
 ```
 
-### Step: Writing Tests
+### 2. Writing Automated Test Cases
 
 Now, let's write some tests to automatically verify that the `add()` and `is_even()` functions work correctly.
 
@@ -68,6 +74,8 @@ Create a new Python file for the tests:
 1. Right-click the project folder, choose `New > Python File`.
 2. Name the file `test_calculator.py`.
 3. Add the following test cases to `test_calculator.py`:
+
+Alternatively, you can hover on the function name and right click of you mouse to generate the test cases for each of the function. The function should look like the followings:
 
 ```python
 # test_calculator.py
@@ -97,20 +105,7 @@ if __name__ == "__main__":
 
 ```
 
-
-### 2. Create a virtual environment (optional)
-
-```bash
-python -m venv venv
-source venv/bin/activate      # On macOS/Linux
-venv\Scripts\activate         # On Windows
-```
-
-### 3. Install required packages (if any)
-
-This project does not require any external packages, but ensure you have Python installed.
-
-### 4. Running the Program
+### 3. Running the Program
 
 To run the program, open `calculator.py` and add the necessary function calls, or execute it manually:
 
@@ -128,7 +123,7 @@ Run the Python file directly:
 python calculator.py
 ```
 
-### 5. Running Automated Tests
+### 4. Running Automated Tests
 
 We use the `unittest` module to automate the testing process.
 
@@ -140,7 +135,7 @@ python -m unittest test_calculator.py
 
 Alternatively, you can run tests using PyCharm's built-in test runner.
 
-### Test Output
+### 5. Test Output
 If all tests pass, you will see something like this:
 
 Ran 2 tests in 0.001s
@@ -149,7 +144,7 @@ Ok
 
 If any test fails, you will see a detailed error message indicating what went wrong.
 
-### Tests Overview
+### 6. Tests Overview
 
 - `test_add()`: Ensures that the `add()` function correctly adds two numbers.
 - `test_is_even()`: Ensures that the `is_even()` function correctly identifies even numbers.
