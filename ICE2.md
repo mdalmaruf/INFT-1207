@@ -1,7 +1,6 @@
 # ICE 2: Fundamentals of Testing
 
 **Course**: INFT 1207-02  
-**Instructor**: Md Al Maruf  
 **Task Type**: Individual Assignment
 
 ---
