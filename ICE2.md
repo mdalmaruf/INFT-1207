@@ -54,15 +54,16 @@ The following test cases should be covered:
 Inside `main.py`, add the following code. It includes the initial structure for the `find_minimum()` function. One test case is already implemented, and you need to modify the function to handle the rest.
 
 ```python
-# main.py
+#main.py
+# Placeholder for student implementation
 def find_minimum(elements):
     if not elements:
         raise ValueError("The list is empty")
-    
+
+        # Convert all elements to integers and find the minimum
     min_element = None
-    # ---------------
-    # ---------------
-    
+    min_element = min(elements)
+
     return min_element
 ```
 And the corresponding test:
