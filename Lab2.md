@@ -34,6 +34,7 @@ In this lab, you will develop a Python program that can:
 4. Store and retrieve the data from books.csv.
 
 ### Example Code
+Create the file named `reading_list.py` to write the main functionalities of the program.
 Below is an example Python code that provides the basic structure for adding, listing, and searching books.
 
 ```python
