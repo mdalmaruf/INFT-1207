@@ -103,6 +103,7 @@ You are required to enhance the current functionality by:
 - **Refactor the Code**: Organize the code by separating the file operations into utility functions for better code readability.
 
 ## Task 2: Test Case Design
+Create another file named `test_reading_list.py` to write the test cases.
 Write at least 10 test cases using Python’s `unittest` framework to verify the following:
 
 - Adding a new book with valid and invalid inputs.
