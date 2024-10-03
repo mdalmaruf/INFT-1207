@@ -35,7 +35,8 @@ def divide(x, y):
 ```
 ## Step 3: Write the Unit Test Code
 1. Open `test_program.py` and add the following code to write test cases using assert methods:
-   ```python
+
+```python
 # test_program.py
 
 import unittest
@@ -91,8 +92,7 @@ class TestSimpleFunctions(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-   ```
+```
 
 ## Step 4: Explanation of Assertion Methods
 
