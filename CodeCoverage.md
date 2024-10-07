@@ -2,11 +2,12 @@
 
 ## Introduction
 In this blog, we will demonstrate how to write unit tests for a Python program and measure the code coverage. Code coverage is an essential metric that helps in assessing how much of your code is tested by your test suite. We will go through the steps to set this up in both **PyCharm** and **VS Code**, including how to run the tests and check coverage.
+Check the link for PyCharm: https://www.jetbrains.com/help/pycharm/running-test-with-coverage.html
 
 ## What is Code Coverage?
 **Code Coverage** is a measure used to describe the degree to which the source code of a program is tested by running tests. It helps to identify untested parts of the code. High code coverage indicates that the majority of your code has been executed during testing, which can reduce the likelihood of bugs in untested code paths.
 
-### Steps Covered in This Blog:
+### Steps Covered in This Tutorial:
 1. Write a simple program
 2. Create unit tests for that program
 3. Measure code coverage
