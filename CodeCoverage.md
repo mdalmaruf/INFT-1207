@@ -74,9 +74,9 @@ Now, let's measure the code coverage for the unit tests. For this, we'll use the
 
 - ### Installing `coverage.py`:
   - Run the following command to install coverage in your terminal:
-   ```bash
-      pip install coverage
-   ```
+```bash
+  pip install coverage
+```
   
 - ### Checking Code Coverage:
   - To measure the coverage, first run the tests with coverage tracking:
@@ -95,7 +95,7 @@ This will show how much of your code has been executed during testing.
 As it stands, we have not written tests for the multiply and divide functions. Let's add them now to improve the code coverage.
 
 ### Adding More Tests:
-``python
+```python
 # test_math_operations.py
 
 import unittest
@@ -131,9 +131,9 @@ After adding the new tests, you can run the tests again and check the updated co
 
   - VS Code: In the terminal, run:
 
-  ```bash
-      python -m unittest test_math_operations.py
-  ```
+```bash
+python -m unittest test_math_operations.py
+```
 
 ### Rechecking Code Coverage:
 
