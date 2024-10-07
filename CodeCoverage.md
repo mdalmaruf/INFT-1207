@@ -81,6 +81,11 @@ Now, let's measure the code coverage for the unit tests. For this, we'll use the
   
 - ### Checking Code Coverage:
   - To measure the coverage, first run the tests with coverage tracking:
+ 
+  ```bash
+    coverage run -m unittest discover 
+  ```
+  or 
   ```bash
      coverage run -m unittest test_math_operations.py
    ```
@@ -141,6 +146,9 @@ python -m unittest test_math_operations.py
 ```bash
 coverage run -m unittest test_math_operations.py
 
+```
+```bash
+python -m coverage report
 ```
 ```bash
 coverage report
