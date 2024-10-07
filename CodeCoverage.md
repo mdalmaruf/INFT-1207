@@ -90,10 +90,13 @@ Now, let's measure the code coverage for the unit tests. For this, we'll use the
      coverage run -m unittest test_math_operations.py
    ```
   - ### After running the tests, generate the coverage report:
-
- ```bash
-    coverage report
-   ```
+```bash
+python -m coverage report
+```
+or
+```bash
+coverage report
+```
 
 This will show how much of your code has been executed during testing.
 
@@ -145,8 +148,8 @@ python -m unittest test_math_operations.py
 
 ```bash
 coverage run -m unittest test_math_operations.py
-
 ```
+or 
 ```bash
 python -m coverage report
 ```
