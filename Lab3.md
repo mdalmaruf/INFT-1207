@@ -145,24 +145,18 @@ Lab3_GroupN/
 
 ### 6. How to Run the Project
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/Lab3_GroupN.git
-   cd Lab3_GroupN
-   ```
 
-
-2. **Run the application**:
+1. **Run the application**:
    ```bash
    python app/Lab3_firstname1_firstname2.py
    ```
 
-3. **Run the tests**:
+2. **Run the tests**:
    ```bash
    python test/test_Lab3_firstname1_firstname2.py
    ```
 
-4. **Run the menu-driven test suite**:
+3. **Run the menu-driven test suite**:
    ```bash
    python test_suite.py
    ```
