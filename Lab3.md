@@ -47,7 +47,7 @@ def ellipse_area(a, b):
 
 def rhombus_area(d1, d2):
     return 0.5 * d1 * d2
-    else:
+    
 ```
 
 ---
