@@ -1,19 +1,22 @@
+
 # INFT 1207 - Test Automation of Banking Project
 
 ## Overview
-This project involves automated testing of a **banking demo website** using **Selenium WebDriver with Python**. It simulates a corporate environment where the team is responsible for testing several modules of the banking system before its release.
+This project involves automated testing of a **banking demo website** using **Selenium WebDriver with Python**. It replicates a corporate setting where the team is responsible for testing multiple banking modules before release.
 
 ## Demo Website
 - **Website:** [http://demo.guru99.com/V4/](http://demo.guru99.com/V4/)
-- **Login Credentials:** 
+- **Login Credentials:**  
   - Visit [http://demo.guru99.com](http://demo.guru99.com) and enter your email to receive temporary credentials.  
   - Example credentials:  
     - **User ID:** mngr160860  
     - **Password:** pumagEm  
-- Credentials are valid for **20 days**. Generate new ones if they expire.
+- Credentials are valid for **20 days**. Generate new ones if needed.
+
+---
 
 ## Project Scope
-Your team will automate and test the following **Manager Role Modules**:
+Your team will automate the following **Manager Role Modules**:
 
 1. **New Customer**  
 2. **Edit Customer**  
@@ -25,58 +28,108 @@ Your team will automate and test the following **Manager Role Modules**:
 8. **Mini Statement**  
 9. **Customized Statement**
 
-Each module has several test cases that must be executed to verify functionality.
-
----
-
-## Project Tasks
-
-### 1. Group Formation (Weeks 6-7)
-- Form a team of **up to 4 members**.
-- If needed, contact the professor for assistance in forming a group.
-- Plan the task distribution equally among team members and document it in the **Project Report**.
-
-### 2. Automation Setup (Weeks 8-12)
-- **Start coding** using Python and Selenium to automate the test cases.
-- Implement a **menu-driven program (`testsuite.py`)** to allow module-based test case execution.
-- **Divide the 120 test cases** across members as follows:
-  - New Customer: 28 cases
-  - Edit Customer: 20 cases
-  - Delete Customer: 8 cases
-  - New Account: 16 cases
-  - Edit Account: 8 cases
-  - Delete Account: 8 cases
-  - Balance Enquiry: 7 cases
-  - Mini Statement: 8 cases
-  - Customized Statement: 17 cases
-
-### 3. Testing and Bug Tracking
-- Execute all test cases and **record the results** in the provided **Test Case Suite Excel sheet**.
-- Export **HTML results** for each test run.
-- Log **failed tests** in the **Bug Tracker Report** for developers to address.
+Each module contains specific **test cases** assigned equally among the team members.
 
 ---
 
 ## Submission Requirements
 
-### Files to Submit
-1. **Source Code:** Submit all project files as a **zipped folder** named:  
-   `INFT 1207 - Group#Project.zip`
-2. **Video Recordings:** Each member records and explains their part of the project. Use one of the following naming conventions:
-   - **Single recording:** `INFT 1207 - Group#ProjectRecording`
-   - **Individual recordings:** `INFT 1207 - Group#Firstname`
-3. **Test Results:** Export results to **HTML**.
-4. **Test Case Suite:** Complete the provided Excel sheet with actual results and pass/fail status.  
-   Name the file:  
-   `INFT 1207 - Group#TestCasesuitesolution`
-5. **Bug Tracker Report:** Use the provided template for any failed tests and submit as:  
-   `INFT 1207 - Group#Bug Tracker Report`
-6. **Project Report:** Submit the project report in **PDF** format named:  
-   `INFT 1207 - Group#Projectreport`
+### 1. Group Project Submission (Due Date: Week 14)
+One submission per group with the following deliverables:
+- **Source Code:** Zipped folder named:  
+  `INFT 1207 - Group#Project.zip`
+- **Test Case Suite:** Excel sheet with results and pass/fail status:  
+  `INFT 1207 - Group#TestCasesuitesolution`
+- **HTML Test Results:** Exported from Selenium tests.
+- **Bug Tracker Report:**  
+  `INFT 1207 - Group#Bug Tracker Report`
+- **Video Recordings:**  
+  - Single recording: `INFT 1207 - Group#ProjectRecording`  
+  - OR individual recordings: `INFT 1207 - Group#Firstname`
+- **Project Report:**  
+  PDF following guidelines (detailed below), named:  
+  `INFT 1207 - Group#Projectreport`
 
-### Demo Presentation (Week 14)
-- **All team members must be present** during the demo. Failure to attend will result in **zero marks** for the absent member.
-- The professor will ask team members to **execute specific test cases** during the demo.
+---
+
+## Project Report Guidelines (Total Marks = 20, Worth = 10%)
+The project report must adhere to the following format:
+
+- **Length:** 7-15 pages  
+- **Formatting:**
+  - **Titles:** Arial, 14pt, Bold  
+  - **Sub-Titles:** Arial, 12pt, Bold, Italics  
+- **Cover Page:**  
+  - Title of the project, Group no., Group members with IDs  
+  - Group logo (design your own), Course code & name, DC logo  
+- **Footer:** Page number and date  
+- **Table of Contents:** 
+
+
+
+### Report Content
+1. **Purpose of the Project**
+2. **Scope of the Project**
+3. **Software Used**
+4. **Naming Convention Used in Programs**
+5. **Distribution of Work Among Team Members**
+6. **Approach Used by the Team**
+7. **Module-wise Implementation Details**
+8. **Challenges Faced by the Team**
+9. **Resolutions Adopted**
+10. **Appendix A:** References (web links, books, etc.)
+11. **Appendix B:** Project Management Details  
+  - **Team Leader:** Summary of contributions in table format:
+    ```
+    Team Member   Topic   Contribution Summary
+    ```
+
+---
+
+## Peer Feedback (Total Marks = 10, Worth = 5%)
+Each member must submit **peer feedback** to evaluate their team members by the due date.  
+
+### Feedback Guidelines
+1. **Timely Submission:**  
+ - Earns **40%** of 10 marks.  
+ - **Late submission penalty:** 25% deduction.
+2. **Peer Ratings:**  
+ - **60% of the marks** will be earned through peer ratings.  
+ - The **average rating** from peers will be used to calculate marks.  
+
+**Note:**  
+- Failure to submit your peer feedback will result in **zero marks** for this portion, regardless of other members’ ratings.
+- The feedback submission is individual, and all ratings must reflect the entire project timeline.
+
+---
+
+## Project Workflow
+
+### Phase 1: Group Formation (Weeks 6-7)
+- Form a group of up to **4 members**.
+- Divide the 120 test cases evenly among members:
+- New Customer: 28 cases  
+- Edit Customer: 20 cases  
+- Delete Customer: 8 cases  
+- New Account: 16 cases  
+- Edit Account: 8 cases  
+- Delete Account: 8 cases  
+- Balance Enquiry: 7 cases  
+- Mini Statement: 8 cases  
+- Customized Statement: 17 cases  
+
+### Phase 2: Development and Testing (Weeks 8-12)
+- Implement a **menu-driven program (`testsuite.py`)** to execute test cases for different modules.
+- Use **Selenium WebDriver** with Python to automate testing.
+- Record results in the **Test Case Suite Excel sheet** and export **HTML reports**.
+
+### Phase 3: Bug Tracking and Reporting
+- Log failed test cases in the **Bug Tracker Report** for further resolution.
+- Prepare individual video recordings explaining your contribution and code.
+
+### Phase 4: Final Submission and Demo (Week 14)
+- Present the project demo during class, where all members must attend and participate.
+- Each member may be asked to **execute specific test cases** during the demo.
 
 ---
 
@@ -89,13 +142,6 @@ Each module has several test cases that must be executed to verify functionality
 | HTML Test Results                            | 10        |
 | Video Recordings (Single: 10 or 2.5 each)    | 10        |
 | Bug Tracker Report                           | 5         |
-
----
-
-## Important Notes
-- Use **Week 13** to complete the project with assistance from the professor.
-- If a group member fails to contribute, they will not receive marks, and the rest of the team will incur a **5% penalty**.
-- Peer evaluation is mandatory, where each member will evaluate their teammates.
 
 ---
 
