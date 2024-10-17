@@ -38,22 +38,16 @@ def circle_area(r):
         raise ValueError("Invalid radius. Must be a non-negative number.")
 
 def trapezium_area(a, b, h):
-    if a > 0 and b > 0 and h > 0:
-        return 0.5 * (a + b) * h
-    else:
-        raise ValueError("Invalid dimensions. All must be positive numbers.")
+    return 0.5 * (a + b) * h
+    
 
 def ellipse_area(a, b):
-    if a > 0 and b > 0:
-        return pi * a * b
-    else:
-        raise ValueError("Invalid dimensions. All must be positive numbers.")
+    return pi * a * b
+  
 
 def rhombus_area(d1, d2):
-    if d1 > 0 and d2 > 0:
-        return 0.5 * d1 * d2
+    return 0.5 * d1 * d2
     else:
-        raise ValueError("Invalid diagonals. All must be positive numbers.")
 ```
 
 ---
@@ -80,27 +74,22 @@ class TestShapes(unittest.TestCase):
         with self.assertRaises(ValueError):
             circle_area(-1)
 
-    def test_trapezium_area_valid(self):
-        self.assertEqual(trapezium_area(3, 4, 5), 17.5)
+   //def test_trapezium_area_valid(self):
+        
 
-    def test_trapezium_area_invalid(self):
-        with self.assertRaises(ValueError):
-            trapezium_area(-1, 4, 5)
+    //def test_trapezium_area_invalid(self):
+       
 
-    def test_ellipse_area_valid(self):
-        self.assertAlmostEqual(ellipse_area(3, 4), 37.69911184307752)
+    //def test_ellipse_area_valid(self):
+        
 
-    def test_ellipse_area_invalid(self):
-        with self.assertRaises(ValueError):
-            ellipse_area(0, -2)
+    //def test_ellipse_area_invalid(self):
+      
 
-    def test_rhombus_area_valid(self):
-        self.assertEqual(rhombus_area(4, 5), 10.0)
-
-    def test_rhombus_area_invalid(self):
-        with self.assertRaises(ValueError):
-            rhombus_area(-4, 5)
-
+    //def test_rhombus_area_valid(self):
+     
+    //def test_rhombus_area_invalid(self):
+        
 if __name__ == "__main__":
     unittest.main()
 ```
@@ -162,22 +151,18 @@ Lab3_GroupN/
    cd Lab3_GroupN
    ```
 
-2. **Install dependencies** (if any):
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-3. **Run the application**:
+2. **Run the application**:
    ```bash
    python app/Lab3_firstname1_firstname2.py
    ```
 
-4. **Run the tests**:
+3. **Run the tests**:
    ```bash
    python test/test_Lab3_firstname1_firstname2.py
    ```
 
-5. **Run the menu-driven test suite**:
+4. **Run the menu-driven test suite**:
    ```bash
    python test_suite.py
    ```
@@ -198,11 +183,10 @@ Create a **test case design document** that includes:
 ### 8. Submission Guidelines
 
 1. **Zip the project folder** containing:
-   - Application code
-   - Test code
-   - Test suite
-   - `README.md`
+   - Application code + Test code + Test suite
    - Test case document
+   - GitHub Link: Create a GitHub Project and Submit the project over there with a Readme.md file
+
 
 2. **Submit a video** where each partner explains:
    - Code implementation
@@ -216,9 +200,5 @@ Create a **test case design document** that includes:
 - **Student 2**: Firstname2 Lastname2
 
 ---
-
-### 10. License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 
