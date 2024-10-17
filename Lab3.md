@@ -176,9 +176,9 @@ Create a **test case design document** that includes:
 
 ### 8. Submission Guidelines
 
-1. **Zip the project folder** containing:
+1. **Zip/Files of the project folder** containing:
    - Application code + Test code + Test suite
-   - Test case document
+   - Test case document + Screenshots of your Test Case Running
    - GitHub Link: Create a GitHub Project and Submit the project over there with a Readme.md file
 
 
