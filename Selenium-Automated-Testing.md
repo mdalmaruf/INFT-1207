@@ -6,10 +6,32 @@ Selenium is a popular open-source framework used to automate web browsers. It al
 
 ## Other Test Automation Tools
 
-- **Cypress**: A JavaScript-based framework for end-to-end testing.
-- **Playwright**: An open-source tool for web automation testing, supports multiple browsers.
-- **TestCafe**: JavaScript-based tool for testing web applications, easy to use and no browser plugins required.
-- **Appium**: An open-source tool for automating mobile apps.
+Here’s a broader list of tools used for **different types of automation testing**:
+
+### **Web Testing Tools**
+- **Cypress**: A JavaScript-based framework for end-to-end web testing.
+- **Playwright**: Supports web automation across multiple browsers.
+- **TestCafe**: JavaScript-based, easy to set up, no plugins required.
+
+### **Mobile Testing Tools**
+- **Appium**: Open-source tool for automating native and hybrid mobile apps.
+- **Espresso**: Google’s framework for Android UI testing.
+- **XCTest**: Apple's framework for iOS testing.
+
+### **API Testing Tools**
+- **Postman**: Popular for manual and automated API testing.
+- **RestAssured**: A Java library for testing RESTful APIs.
+- **SoapUI**: For functional testing of SOAP and REST APIs.
+
+### **Desktop Testing Tools**
+- **WinAppDriver**: Microsoft’s tool for automating Windows applications.
+- **AutoIt**: For automating Windows desktop applications and GUI interactions.
+
+### **Performance Testing Tools**
+- **JMeter**: Open-source tool for performance and load testing.
+- **Gatling**: Scala-based tool for load testing web applications.
+
+---
 
 ## How Selenium Works and Why It’s Used
 
