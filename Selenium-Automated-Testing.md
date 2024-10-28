@@ -142,6 +142,16 @@ This guide will help you set up Selenium with Python for test automation.
       assert driver.current_url == "https://www.saucedemo.com/inventory.html"
   ```
 
+##### Code Explanation
+    - The `driver()` fixture initializes a Chrome browser using Selenium WebDriver.
+    - implicitly_wait(10): Sets a timeout to wait for elements to load before throwing an error.
+    - yield driver: Makes the WebDriver instance available to tests.
+    - driver.quit(): Ensures the browser closes after each test to free up resources.
+    - The `test_valid_login()` function tests valid login by entering correct credentials and validating the resulting URL.
+    - Key Assertion: Ensures the user is redirected to the inventory page after logging in.
+
+
+
 #### 5. Run Tests from Command Line
   - You can run the test using `pytest`:
   ```bash
@@ -170,6 +180,8 @@ def driver():
 
 #### 6. Additional Test Example (Parameterized Test)
 ```python
+#@pytest.mark.parametrize: Runs the same test with multiple inputs (different usernames and passwords).
+
 @pytest.mark.parametrize("username, password, error", [
     ("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out."),
     ("invalidUser", "invalidPass", "Epic sadface: Username and password do not match any user in this service")
