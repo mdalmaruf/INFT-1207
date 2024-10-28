@@ -141,11 +141,33 @@ This guide will help you set up Selenium with Python for test automation.
   
       assert driver.current_url == "https://www.saucedemo.com/inventory.html"
   ```
+
 #### 5. Run Tests from Command Line
   - You can run the test using `pytest`:
   ```bash
   pytest tests/test_login_page.py
   ```
+
+#### If You Encounter ChromeDriver Errors
+
+If your Selenium tests fail due to ChromeDriver issues, try installing the driver manually.
+
+##### **Manual WebDriver Download**  
+[Download ChromeDriver](https://googlechromelabs.github.io/chrome-for-testing/#stable)
+
+After downloading, extract the `chromedriver.exe` to a known location and update your code:
+
+```python
+@pytest.fixture
+def driver():
+    service = Service("C:/drivers/chromedriver.exe")  # Use full path
+    driver = webdriver.Chrome(service=service)
+    driver.implicitly_wait(10)
+    yield driver
+    driver.quit()
+```
+
+
 #### 6. Additional Test Example (Parameterized Test)
 ```python
 @pytest.mark.parametrize("username, password, error", [
