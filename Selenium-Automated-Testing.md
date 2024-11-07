@@ -86,7 +86,7 @@ This guide will help you set up Selenium with Python for test automation.
   ```
   - Install virtual environment:
   ```bash
-  python -m pip install --user virtualenv
+  python -m pip install virtualenv
   ```
   - Create and activate a virtual environment:
   ```bash
