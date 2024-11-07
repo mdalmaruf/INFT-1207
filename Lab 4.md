@@ -96,6 +96,12 @@ Open `test_Lab4_firstname1_firstname2.py` in a code editor and make the followin
    - Navigate to the Body Fat Calculator webpage.
    - Perform calculations based on the gender set in the code.
    - Assert the result and print it to the console.
+4. Running the Tests
+   - To execute these tests, use the following command:
+```bash
+pytest -q test_Lab4_firstname1_firstname2.py
+
+```
 
 ### 5. Recording a Video Demonstration
 
