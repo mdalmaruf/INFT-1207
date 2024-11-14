@@ -87,3 +87,73 @@ if __name__ == "__main__":
 **Screenshots**: Take screenshots of the running test cases to include in your submission.
 
 
+
+Sample:
+```python
+
+# Importing libraries
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select  # Add this line for Select
+
+import unittest
+
+class Guru99Test(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()  # Or specify the WebDriver path
+
+    def test_register_user(self):
+        driver = self.driver
+        driver.get("http://demo.guru99.com/test/newtours/register.php")
+
+        # Filling out Contact Information fields
+        driver.find_element(By.NAME, "firstName").send_keys("John")
+        driver.find_element(By.NAME, "lastName").send_keys("Doe")
+        driver.find_element(By.NAME, "phone").send_keys("1234567890")
+        driver.find_element(By.NAME, "userName").send_keys("johndoe@example.com")
+
+        # Filling out Mailing Information fields
+        driver.find_element(By.NAME, "address1").send_keys("123 Elm Street")
+        driver.find_element(By.NAME, "city").send_keys("Metropolis")
+        driver.find_element(By.NAME, "state").send_keys("Central State")
+        driver.find_element(By.NAME, "postalCode").send_keys("54321")
+
+        # Selecting a country from the dropdown
+        country_dropdown = Select(driver.find_element(By.NAME, "country"))
+        country_dropdown.select_by_visible_text("UNITED STATES")
+
+        # Filling out User Information fields
+        driver.find_element(By.NAME, "email").send_keys("JohnDoe")
+        driver.find_element(By.NAME, "password").send_keys("mySecurePassword123")
+        driver.find_element(By.NAME, "confirmPassword").send_keys("mySecurePassword123")
+
+        # Submit the registration form
+        driver.find_element(By.NAME, "submit").click()
+
+        # Using XPath to locate the success message and verify registration success
+        success_message = driver.find_element(By.XPATH, "//font[contains(text(),'Thank you for registering.')]")
+        self.assertIsNotNone(success_message)
+
+        # Here, check for a successful registration message or redirection (customize as needed)
+        # self.assertIn("Thank you for registering", driver.page_source)
+
+
+        # Add registration steps here using locators
+        # Example: driver.find_element(By.NAME, "firstName").send_keys("YourFirstName")
+        # Add assertion to confirm registration success (customize as needed)
+
+    # def test_login_user(self):
+    #     driver = self.driver
+    #     driver.get("http://demo.guru99.com/test/newtours/")
+
+        # Add login steps here and assert successful login
+        # Example: driver.find_element(By.NAME, "userName").send_keys("YourFirstName")
+        # Add assertion to verify login success (customize as needed)
+
+    def tearDown(self):
+        self.driver.quit()
+
+if __name__ == "__main__":
+    unittest.main()
+```
+
