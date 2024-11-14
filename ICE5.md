@@ -25,7 +25,7 @@ This assignment involves creating a Selenium test automation script in Python to
 ### Step 2: Install Required Libraries
 1. While the environment is activated, install the necessary libraries:
    ```bash
-   pip install selenium pytest
+   pip install selenium pytest webdriver-manager
    ```
 
 ## Step 2: Create Test Folder and Test File
