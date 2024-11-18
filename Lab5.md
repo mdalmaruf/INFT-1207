@@ -178,59 +178,35 @@ def setup_driver():
 # Test Case 1: Navigate to Product Category
 def test_navigate_to_category(driver):
     print("Navigating to Women -> Tops -> Hoodies & Sweatshirts")
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.LINK_TEXT, "Women"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.LINK_TEXT, "Tops"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.LINK_TEXT, "Hoodies & Sweatshirts"))
-    ).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Women"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Tops"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Hoodies & Sweatshirts"))).click()
 
 # Test Case 2: Apply Filters
 def test_apply_filters(driver):
     print("Applying filters: Style: Pullover, Size: M, Color: Purple, Price: $50-$59.99, Material: Polyester")
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//span[text()='Pullover']"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//span[text()='M']"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//span[text()='Purple']"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//span[contains(text(),'Polyester')]"))
-    ).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Pullover']"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='M']"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Purple']"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(),'Polyester')]"))).click()
 
 # Test Case 3: Select Product and Add to Cart
 def test_add_to_cart(driver):
     print("Selecting a product and adding to the cart")
-    product = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'product-item-link')]"))
-    )
+    product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'product-item-link')]")))
     product.click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[@title='Add to Cart']"))
-    ).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@title='Add to Cart']"))).click()
 
 # Test Case 4: View Cart and Proceed to Checkout
 def test_checkout(driver):
     print("Proceeding to checkout")
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'showcart')]"))
-    ).click()
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//button[@title='Proceed to Checkout']"))
-    ).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'showcart')]"))).click()
+    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@title='Proceed to Checkout']"))).click()
 
 # Test Case 5: Validate Order Summary
 def test_validate_order_summary(driver):
     print("Validating the order summary")
-    summary = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CLASS_NAME, "block-summary"))
-    )
+    summary = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "block-summary")))
     assert "Pullover" in summary.text, "Order Summary does not contain the selected product"
 
 # Main function to run all test cases
