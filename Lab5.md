@@ -161,73 +161,7 @@ def test_add_to_cart(driver):
 
 ```
 
-#Sample Working Example:
-   ```python
-   from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
-# Test setup
-def setup_driver():
-    driver = webdriver.Chrome()  # Ensure the ChromeDriver is installed and in PATH
-    driver.maximize_window()
-    driver.get("https://magento.softwaretestingboard.com/")
-    return driver
-
-# Test Case 1: Navigate to Product Category
-def test_navigate_to_category(driver):
-    print("Navigating to Women -> Tops -> Hoodies & Sweatshirts")
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Women"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Tops"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Hoodies & Sweatshirts"))).click()
-
-# Test Case 2: Apply Filters
-def test_apply_filters(driver):
-    print("Applying filters: Style: Pullover, Size: M, Color: Purple, Price: $50-$59.99, Material: Polyester")
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Pullover']"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='M']"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Purple']"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(),'Polyester')]"))).click()
-
-# Test Case 3: Select Product and Add to Cart
-def test_add_to_cart(driver):
-    print("Selecting a product and adding to the cart")
-    product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'product-item-link')]")))
-    product.click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@title='Add to Cart']"))).click()
-
-# Test Case 4: View Cart and Proceed to Checkout
-def test_checkout(driver):
-    print("Proceeding to checkout")
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'showcart')]"))).click()
-    WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@title='Proceed to Checkout']"))).click()
-
-# Test Case 5: Validate Order Summary
-def test_validate_order_summary(driver):
-    print("Validating the order summary")
-    summary = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "block-summary")))
-    assert "Pullover" in summary.text, "Order Summary does not contain the selected product"
-
-# Main function to run all test cases
-def main():
-    driver = setup_driver()
-    try:
-        test_navigate_to_category(driver)
-        test_apply_filters(driver)
-        test_add_to_cart(driver)
-        test_checkout(driver)
-        test_validate_order_summary(driver)
-        print("Test completed successfully!")
-    except Exception as e:
-        print(f"Test failed: {e}")
-    finally:
-        driver.quit()
-
-if __name__ == "__main__":
-    main()
-
-   ```
 
 
 # Tips and Best Practices
@@ -266,3 +200,113 @@ if __name__ == "__main__":
 ## **Upload**
 - Attach the zipped project folder to the assignment folder.
 
+
+# Sample Working Example:
+   ```python
+import unittest
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+class MagentoTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome()  # Ensure ChromeDriver is installed and in PATH
+        cls.driver.maximize_window()
+        cls.driver.get("https://magento.softwaretestingboard.com/")
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+
+    def test_01_navigate_to_product_page(self):
+        """Navigate to Women -> Tops -> Hoodies & Sweatshirts"""
+        print("Navigating to Women -> Tops -> Hoodies & Sweatshirts")
+        driver = self.driver
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Women"))).click()
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, "Tops"))).click()
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//div[text()='Category']"))
+        ).click()
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[contains(text(), 'Hoodies & Sweatshirts')]"))
+        ).click()
+
+    def test_02_apply_filters(self):
+        """Apply Filters"""
+        print("Applying filters: Pullover, Size: M, Color: Purple")
+        driver = self.driver
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Pullover']"))).click()
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='M']"))).click()
+        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[text()='Purple']"))).click()
+
+    def test_03_add_to_cart(self):
+        """Select Product and Add to Cart"""
+        print("Selecting a product and adding it to the cart")
+        driver = self.driver
+        product = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'product-item-link')]"))
+        )
+        product.click()
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[@title='Add to Cart']"))
+        ).click()
+
+    def test_04_checkout(self):
+        """View Cart and Proceed to Checkout"""
+        print("Proceeding to checkout")
+        driver = self.driver
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'showcart')]"))
+        ).click()
+        WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//button[@title='Proceed to Checkout']"))
+        ).click()
+
+    def test_05_validate_order_summary(self):
+        """Validate Order Summary"""
+        print("Validating the order summary")
+        driver = self.driver
+        summary = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "block-summary"))
+        )
+        assert "Pullover" in summary.text, "Order Summary does not contain the selected product"
+
+
+if __name__ == "__main__":
+    suite = unittest.TestSuite()
+    suite.addTest(MagentoTest("test_01_navigate_to_product_page"))
+    suite.addTest(MagentoTest("test_02_apply_filters"))
+    suite.addTest(MagentoTest("test_03_add_to_cart"))
+    suite.addTest(MagentoTest("test_04_checkout"))
+    suite.addTest(MagentoTest("test_05_validate_order_summary"))
+
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(suite)
+
+
+   ```
+---
+
+## Explanation
+
+### **Explicit TestSuite**
+- The `unittest.TestSuite()` is used to explicitly specify the order of test execution.
+- This approach ensures that tests are executed in the desired sequence, irrespective of the default alphabetical sorting.
+
+### **Naming Conventions**
+- Each test method is prefixed with `test_01_`, `test_02_`, etc., for clarity and to indicate the intended execution order.
+- This naming convention helps:
+  - Maintain readability.
+  - Ensure consistent execution order when relying on default sorting.
+
+### **Sequential Execution**
+- The `TestSuite` ensures that tests are executed in the exact order they are added to the suite.
+- This is especially important when:
+  - Tests are interdependent.
+  - The outcome of one test affects the subsequent tests.
+
+---
