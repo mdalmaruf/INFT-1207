@@ -302,7 +302,7 @@ if __name__ == "__main__":
 
 
 
-## Why These Issues Happen
+## Other Issues You may Find
 
 - **Hover Issues**  
 Elements like the "Tops" menu are hidden until you hover over the parent menu ("Women"). Selenium's default click action does not emulate hovering, so the submenu remains hidden, causing the test to fail.
