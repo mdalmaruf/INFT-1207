@@ -189,18 +189,6 @@ def test_add_to_cart(driver):
       EC.presence_of_element_located((By.XPATH, "//button[text()='Add to Cart']"))
   )
   ```
-# Submission Guidelines
-
-## **File Format**
-- Submit `Lab5_firstname1_firstname2.py` following naming conventions.
-
-## **Video**
-- Record a clear demonstration of your code and test execution.
-
-## **Upload**
-- Attach the zipped project folder to the assignment folder.
-
-
 # Sample Working Example:
    ```python
 import unittest
@@ -421,3 +409,15 @@ if __name__ == "__main__":
 ### Explicit Waits
 - **`WebDriverWait`** ensures elements are interactable before clicking, reducing flaky tests caused by dynamic page loads.
 
+
+
+# Submission Guidelines
+
+## **File Format**
+- Submit `Lab5_firstname1_firstname2.py` following naming conventions.
+
+## **Video**
+- Record a clear demonstration of your code and test execution.
+
+## **Upload**
+- Attach the zipped project folder to the assignment folder.
