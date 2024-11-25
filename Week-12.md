@@ -202,14 +202,14 @@ if __name__ == "__main__":
 ### Steps:
 
    - The date picker on the demo site is inside an iframe. Selenium needs to switch to the iframe to interact with the elements inside:
-``python
-  driver.switch_to.frame(driver.find_element(By.CLASS_NAME, "demo-frame"))
-```
+      ``python
+        driver.switch_to.frame(driver.find_element(By.CLASS_NAME, "demo-frame"))
+      ```
    - XPath is used to locate the desired date, e.g., the 15th:
-```python
-date_to_select = driver.find_element(By.XPATH, "//a[text()='15']")
-date_to_select.click()
-```
+      ```python
+      date_to_select = driver.find_element(By.XPATH, "//a[text()='15']")
+      date_to_select.click()
+      ```
 
 
 This tutorial demonstrates the use of Selenium for automating repetitive tasks like selecting options, checking boxes, and handling calendars. Use this knowledge to test web applications effectively.
