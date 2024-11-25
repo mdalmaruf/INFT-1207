@@ -72,7 +72,7 @@ import unittest
 class RadioButtonDemo(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
 
     def test_radiobutton(self):
@@ -109,7 +109,7 @@ import unittest
 class CheckboxDemo(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
 
     def test_checkboxes(self):
@@ -145,7 +145,7 @@ import unittest
 class DatePickerDemo(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
+        cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
 
     def test_datepicker(self):
