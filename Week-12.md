@@ -12,54 +12,54 @@ This tutorial demonstrates the use of Selenium WebDriver for automating web appl
 ```bash
    pip install selenium webdriver-manager pytest
 ```
-# Project Setup
+## Project Setup
 
 Follow the steps below to set up the project:
 
-## 1. Create a New Project
+### 1. Create a New Project
 - Open **PyCharm** and create a new project.
 
-## 2. Create a Folder for Selenium Tests
+### 2. Create a Folder for Selenium Tests
 - Inside the project folder, create a new folder named `selenium_tests`.
 
-## 3. Add Python Files
+### 3. Add Python Files
 - Under the `selenium_tests` folder, create the following Python files:
   - `handling_radiobutton.py`
   - `handling_checkbox.py`
   - `handling_dates.py`
 
-## 4. Install Dependencies
+### 4. Install Dependencies
 - Open the terminal inside PyCharm and run the following command:
 
 ```bash
 pip install selenium webdriver-manager pytest
 ```
 
-# Files in the Repository
+## Files in the Repository
 
 - **`handling_radiobutton.py`**: Demonstrates how to interact with radio buttons.
 - **`handling_checkbox.py`**: Illustrates checkbox interactions.
 - **`handling_dates.py`**: Handles date selection in calendar widgets.
 
-# Running the Tests
+## Running the Tests
 
-# Using Unittest
+### Using Unittest
 The `unittest.main()` function automatically detects and runs all test cases defined in the script when you execute the file using python filename.py.
 For example, to run `handling_radiobutton.py`, you simply use:
 
 ```bash
 python selenium_tests/handling_radiobutton.py
 ```
-## Alternatively when Using PyTest
+### Alternatively when Using PyTest
 1. Open the terminal in the project directory.
 2. Run the following command:
 ```bash
    pytest selenium_tests/handling_radiobutton.py
 ```
 
-# Code Explanation
+## Code Explanation
 
-## Handling Radio Buttons (`handling_radiobutton.py`)
+### Handling Radio Buttons (`handling_radiobutton.py`)
 
 ```python
 import time
@@ -96,13 +96,13 @@ class RadioButtonDemo(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
-### Steps:
+#### Steps:
 
 1. Use `webdriver_manager` to manage the Chrome driver.
 2. Open a test site for radio buttons.
 3. Interact with a radio button using its ID.
 
-## Handling Checkboxes (`handling_checkbox.py`)
+### Handling Checkboxes (`handling_checkbox.py`)
 
 ```python
 from selenium import webdriver
@@ -140,7 +140,7 @@ if __name__ == "__main__":
 1. Navigate to a site with checkboxes.
 2. Select and print the checkbox interaction.
 
-## Handling Dates (`handling_dates.py`)
+### Handling Dates (`handling_dates.py`)
 
 ```python
 import time
