@@ -202,8 +202,8 @@ if __name__ == "__main__":
 ### Steps:
 
    - The date picker on the demo site is inside an iframe. Selenium needs to switch to the iframe to interact with the elements inside:
-      ``python
-        driver.switch_to.frame(driver.find_element(By.CLASS_NAME, "demo-frame"))
+      ```python
+      driver.switch_to.frame(driver.find_element(By.CLASS_NAME, "demo-frame"))
       ```
    - XPath is used to locate the desired date, e.g., the 15th:
       ```python
