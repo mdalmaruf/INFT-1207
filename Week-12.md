@@ -9,9 +9,9 @@ This tutorial demonstrates the use of Selenium WebDriver for automating web appl
 1. **Python**: Version 3.8 or above installed.
 2. **PyCharm IDE**: Installed for development.
 3. **Required Libraries**: Install the following in your terminal:
-   ```bash
+```bash
    pip install selenium webdriver-manager pytest
-  ```
+```
 # Project Setup
 
 Follow the steps below to set up the project:
@@ -43,17 +43,19 @@ pip install selenium webdriver-manager pytest
 
 # Running the Tests
 
-## Using PyTest
+# Using Unittest
+The `unittest.main()` function automatically detects and runs all test cases defined in the script when you execute the file using python filename.py.
+For example, to run `handling_radiobutton.py`, you simply use:
+
+```bash
+python selenium_tests/handling_radiobutton.py
+```
+## Alternatively when Using PyTest
 1. Open the terminal in the project directory.
 2. Run the following command:
-
-   ```bash
-   pytest
-  ```
-# Using Unittest
-
-1. Select a file in PyCharm.
-2. Right-click and choose **Run Unittest in...**.
+```bash
+   pytest selenium_tests/handling_radiobutton.py
+```
 
 # Code Explanation
 
