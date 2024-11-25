@@ -61,8 +61,6 @@ python selenium_tests/handling_radiobutton.py
 
 ## Handling Radio Buttons (`handling_radiobutton.py`)
 
-### Code:
-
 ```python
 import time
 
@@ -106,8 +104,6 @@ if __name__ == "__main__":
 
 ## Handling Checkboxes (`handling_checkbox.py`)
 
-### Code:
-
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -144,9 +140,7 @@ if __name__ == "__main__":
 1. Navigate to a site with checkboxes.
 2. Select and print the checkbox interaction.
 
-   ## Handling Dates (`handling_dates.py`)
-
-### Code:
+## Handling Dates (`handling_dates.py`)
 
 ```python
 import time
